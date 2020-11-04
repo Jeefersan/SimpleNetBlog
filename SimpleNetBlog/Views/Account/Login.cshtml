@@ -1,0 +1,25 @@
+@model LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<form asp-controller="Account" asp-action="Login" method="post">
+    <div class="form-control-lg">
+        <label asp-for="UserName">Username</label>
+        <input asp-for="UserName"/>
+    </div>
+    <div class="form-control-lg">
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password"/>
+    </div>
+    <div class="form-control-lg">
+        <label asp-for="RememberMe">Remember me</label>
+        <input type="checkbox" asp-for="RememberMe"/>
+    </div>
+
+    <input class="btn btn-lg" type="submit" value="Login">
+
+
+
+</form>

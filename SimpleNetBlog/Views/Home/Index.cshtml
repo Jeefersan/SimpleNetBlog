@@ -1,0 +1,13 @@
+﻿@model PostsViewModel
+
+@{
+    ViewData["Title"] = "Simple Net Blog";
+}
+
+
+<br>
+
+@foreach (var post in @Model.Posts)
+{
+    <partial name="_Post" model="post"></partial>
+}

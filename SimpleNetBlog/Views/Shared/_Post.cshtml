@@ -1,0 +1,31 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@model Post
+
+<div class="card">
+
+    <div class="card-body">
+        <h3 class="card-title">
+            <a asp-controller="Home" asp-action="Post" asp-route-id="@Model.PostId">@Model.Title</a>
+        </h3>
+        <h6 class="card-subtitle">@Model.CreatedDate.ToString() by @User.Identity.Name</h6>
+        <p class="card-text">@Model.Content</p>
+    </div>
+    <div class="card-body">
+        Last updated: @Model.LastUpdatedDate?
+    </div>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="card-footer">
+            <a class="btn btn-lg" asp-controller="Panel" asp-action="EditPost" asp-route-id="@Model.PostId">
+                <span class="fa fa-edit"></span>
+            </a>
+            <a class="btn btn-lg" asp-controller="Panel" asp-action="RemovePost" asp-route-id="@Model.PostId">
+                <span class="fa fa-trash"></span>
+            </a>
+        </div>
+    }
+
+</div>
