@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SimpleNetBlog.Data;
+using SimpleNetBlog.Models;
 
 namespace SimpleNetBlog
 {
@@ -20,28 +21,28 @@ namespace SimpleNetBlog
 
             var scope = host.Services.CreateScope();
 
-            createAdmin(scope.ServiceProvider).Wait();
+            CreateAdmin(scope.ServiceProvider).Wait();
 
             host.Run();
         }
 
-        private static async Task createAdmin(IServiceProvider serviceProvider)
+        private static async Task CreateAdmin(IServiceProvider serviceProvider)
         {
             var context = serviceProvider.GetRequiredService<ApplicationDbContext>();
-            var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
             context.Database.EnsureCreated();
 
             var adminUser = await userManager.FindByNameAsync("admin");
             if (adminUser == null)
             {
-                adminUser = new IdentityUser
+                adminUser = new ApplicationUser
                     {UserName = "admin", Email = "admin@simplenetblog.com", EmailConfirmed = true};
                 await userManager.CreateAsync(adminUser, "password123");
             }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }

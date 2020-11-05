@@ -1,5 +1,32 @@
-$body-bg: #cbcbcb;
+$body-bg: #eeeeee;
 
 $primary: #6aa7a7;
+
+.card-post {
+  min-width: 480px;
+}
+
+.container-login {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.footer{
+  text-align: center;
+}
+
+.form-login {
+  margin:auto;
+  min-width: 280px;
+  border-radius: 16px;
+  -webkit-box-shadow: 5px 5px 9px 4px rgba(176,176,176,0.79);
+  box-shadow: 5px 5px 9px 4px rgba(176,176,176,0.79);
+}
+
+.validation-summary-errors {
+  color: #9d0505;
+}
+
 
 @import "../lib/bootstrap/scss/bootstrap";

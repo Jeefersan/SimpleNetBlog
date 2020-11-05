@@ -1,20 +1,27 @@
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @model Post
 
-<div class="card">
+<div class="card card-post mb-5">
 
     <div class="card-body">
         <h3 class="card-title">
             <a asp-controller="Home" asp-action="Post" asp-route-id="@Model.PostId">@Model.Title</a>
         </h3>
-        <h6 class="card-subtitle">@Model.CreatedDate.ToString() by @User.Identity.Name</h6>
+        <p class="card-subtitle text-muted">@Model.CreatedDate by @User.Identity.Name</p><br>
         <p class="card-text">@Model.Content</p>
     </div>
-    <div class="card-body">
-        Last updated: @Model.LastUpdatedDate?
+    <div class="card-body text-muted font-italic">
+        Last updated: @if (Model.LastUpdatedDate != null)
+                      {
+                         <span>@Model.LastUpdatedDate</span>
+                      }
+                      else
+                      {
+                          <span>Never</span>
+                      }
     </div>
     @if (SignInManager.IsSignedIn(User))
     {

@@ -7,7 +7,13 @@
 
 <br>
 
-@foreach (var post in @Model.Posts)
-{
-    <partial name="_Post" model="post"></partial>
-}
+<div class="container m-auto">
+    
+    @foreach (var post in @Model.Posts)
+    {
+        <partial name="_Post" model="post"></partial>
+    }
+
+    
+</div>
+

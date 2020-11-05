@@ -1,15 +1,16 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SimpleNetBlog.Models;
 using SimpleNetBlog.ViewModels;
 
 namespace SimpleNetBlog.Controllers
 {
     public class AccountController : Controller
     {
-        private SignInManager<IdentityUser> _signInManager;
+        private SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController(SignInManager<IdentityUser> signInManager)
+        public AccountController(SignInManager<ApplicationUser> signInManager)
         {
             _signInManager = signInManager;
         }
@@ -20,20 +21,24 @@ namespace SimpleNetBlog.Controllers
             return View(new LoginViewModel { UserName = userName});
         }
         
-        [HttpPost]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, false, false);
+                var result = await _signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, loginViewModel.RememberMe, false);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Panel");
                 }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid attempt.");
+                }
             }
             else
             {
-                ModelState.AddModelError("invalid", "Invalid attempt.");
+                ModelState.AddModelError("", "Invalid attempt.");
             }
 
             return View(loginViewModel);

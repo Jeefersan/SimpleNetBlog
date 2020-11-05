@@ -644,3 +644,5 @@
 /home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.dll
 /home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.pdb
 /home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.genruntimeconfig.cache
+/home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Settings/ChangePassword.cshtml.g.cs
+/home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Settings/Profile.cshtml.g.cs

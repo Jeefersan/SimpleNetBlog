@@ -1,0 +1,32 @@
+@model ProfileViewModel
+
+
+<div class="container container-settings">
+
+    <form asp-controller="Settings" asp-action="Profile" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="DisplayName">Display name</label>
+            <input asp-for="DisplayName" class="fom-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="EmailAddress">Email address</label>
+            <input asp-for="EmailAddress" type="email" class="fom-control">
+        </div>
+
+        <div class="validation-errors mt-5" asp-validation-summary="All"></div>
+
+        <div class="btn-block">
+            <input class="btn btn-outline-secondary" type="submit" value="Save changes">
+        </div>
+    </form>
+    
+    
+
+
+    @if (TempData["Success"] != null)
+    {
+        <p class="alert alert-success">@TempData["Success"]</p>
+    }
+
+</div>

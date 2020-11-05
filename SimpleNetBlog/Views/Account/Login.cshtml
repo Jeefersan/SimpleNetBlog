@@ -1,25 +1,32 @@
 @model LoginViewModel
 
-@{
-    Layout = null;
-}
 
-<form asp-controller="Account" asp-action="Login" method="post">
-    <div class="form-control-lg">
-        <label asp-for="UserName">Username</label>
-        <input asp-for="UserName"/>
-    </div>
-    <div class="form-control-lg">
-        <label asp-for="Password">Password</label>
-        <input asp-for="Password"/>
-    </div>
-    <div class="form-control-lg">
-        <label asp-for="RememberMe">Remember me</label>
-        <input type="checkbox" asp-for="RememberMe"/>
-    </div>
+<div class="container-login">
 
-    <input class="btn btn-lg" type="submit" value="Login">
+    <form class="form-login px-3 py-5 bg-white" asp-controller="Account" asp-action="Login" method="post">
+        <h3 class="display-6 mb-4 text-primary">Please sign in</h3>
+        <div class="form-group">
+            <label asp-for="UserName" class="sr-only"></label>
+            <input asp-for="UserName" class="form-control" placeholder="Enter your username"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="sr-only">Password</label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password"/>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <label asp-for="RememberMe">Remember me</label>
+                <input asp-for="RememberMe"/>
+            </div>
+        </div>
+
+        <div class="btn-block">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Login">
+        </div>
+        
+        <div class="validation-errors mt-5" asp-validation-summary="All"></div>
 
 
+    </form>
 
-</form>
+</div>

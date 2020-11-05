@@ -1,26 +1,35 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Panel" asp-action="Index" title="Manage">Hello @User.Identity.Name!</a>
+            <a class="nav-link btn-outline-light text-dark dropdown-toggle" id="dropdownAdminPanel" title="Manage">Welcome back @User.Identity.Name!</a>
         </li>
-        <li class="nav-item">
-            <a class="btn btn-lg" asp-controller="Panel" asp-action="Index">Admin Panel</a>
-        </li>
-        <li class="nav-item">
-            <form class="form-inline"  asp-controller="Account" asp-action="Logout">
-                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-            </form>
-        </li>
+
+    
+    <div class="btn-group">
+        <button type="button" class="btn btn-outline-secondary btn-lg dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="False">
+            Welcome back @User.Identity.Name!
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownAdminPanel">
+            <a class="dropdown-item" asp-controller="Panel" asp-action="Index">Admin Panel</a>
+            <a class="dropdown-item" asp-controller="Settings" asp-action="Profile">Profile Settings</a>
+            <a class="dropdown-item" asp-controller="Settings" asp-action="ChangePassword">Change Password</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" asp-controller="Account" asp-action="Logout"></a>
+        </div>
+
+    </div>
+    
     }
     else
     {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
-        </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+    </li>
     }
 </ul>

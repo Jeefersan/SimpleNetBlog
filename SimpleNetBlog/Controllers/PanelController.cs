@@ -42,7 +42,8 @@ namespace SimpleNetBlog.Controllers
             {
                 return View(new Post());
             }
-            var post = await _postRepository.Get((int)id);
+
+            var post = await _postRepository.Get((int) id);
             return View(post);
         }
 
@@ -52,7 +53,7 @@ namespace SimpleNetBlog.Controllers
             var post = await _postRepository.Update(updatedPost);
             return RedirectToAction("Post", new {id = post.PostId});
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> Post(int id)
         {
@@ -62,6 +63,7 @@ namespace SimpleNetBlog.Controllers
                 ViewData["Title"] = post.Title;
                 return View(post);
             }
+
             return NotFound();
         }
 

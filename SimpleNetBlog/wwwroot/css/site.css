@@ -1,4 +1,30 @@
 @charset "UTF-8";
+.card-post {
+  min-width: 480px;
+}
+
+.container-login {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+.form-login {
+  margin: auto;
+  min-width: 280px;
+  border-radius: 16px;
+  -webkit-box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
+  box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
+}
+
+.validation-summary-errors {
+  color: #9d0505;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -61,7 +87,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #cbcbcb;
+  background-color: #eeeeee;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -473,7 +499,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #cbcbcb;
+  background-color: #eeeeee;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -3702,13 +3728,13 @@ input[type=button].btn-block {
   outline: none;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #cbcbcb, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
+  box-shadow: 0 0 0 1px #eeeeee, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #cbcbcb, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
+  box-shadow: 0 0 0 1px #eeeeee, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #cbcbcb, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
+  box-shadow: 0 0 0 1px #eeeeee, 0 0 0 0.2rem rgba(106, 167, 167, 0.25);
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -3876,8 +3902,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #cbcbcb;
-  border-color: #dee2e6 #dee2e6 #cbcbcb;
+  background-color: #eeeeee;
+  border-color: #dee2e6 #dee2e6 #eeeeee;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

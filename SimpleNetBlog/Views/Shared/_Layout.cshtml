@@ -33,19 +33,17 @@
     </nav>
 </header>
 <div class="container">
-    <main role="main" class="pb-3">
+    <main role="main" class="pb-3 pt-3">
         @RenderBody()
     </main>
 </div>
 
 <footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; @DateTime.Today.Year - Powered by SimpleNetBlog
-    </div>
+    <span>&copy; @DateTime.Today.Year - Powered by SimpleNetBlog</span>
 </footer>
-        <script src="lib/jquery/dist/jquery.min.js"></script>
-        <script src="lib/popper.js/dist/popper.min.js"></script>
-        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/popper.js/dist/popper.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script src="~/js/site.js" asp-append-version="true"></script>
 <div class="container">
