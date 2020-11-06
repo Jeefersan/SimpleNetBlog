@@ -1,9 +1,13 @@
 @charset "UTF-8";
+.card-buttons {
+  padding: 0 20px;
+}
+
 .card-post {
   min-width: 480px;
 }
 
-.container-login {
+.container-form {
   height: 80vh;
   display: flex;
   align-items: center;
@@ -13,12 +17,16 @@
   text-align: center;
 }
 
-.form-login {
+.form-container {
   margin: auto;
   min-width: 280px;
   border-radius: 16px;
   -webkit-box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
   box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
+}
+
+textarea {
+  background-color: white;
 }
 
 .validation-summary-errors {

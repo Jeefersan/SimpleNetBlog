@@ -6,30 +6,33 @@
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a class="nav-link btn-outline-light text-dark dropdown-toggle" id="dropdownAdminPanel" title="Manage">Welcome back @User.Identity.Name!</a>
+            <a class="btn text-dark mr-1" id="dropdownAdminPanel" title="Manage">Welcome back @UserManager.GetUserAsync(User).Result.DisplayName!</a>
         </li>
 
-    
-    <div class="btn-group">
-        <button type="button" class="btn btn-outline-secondary btn-lg dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="False">
-            Welcome back @User.Identity.Name!
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownAdminPanel">
-            <a class="dropdown-item" asp-controller="Panel" asp-action="Index">Admin Panel</a>
-            <a class="dropdown-item" asp-controller="Settings" asp-action="Profile">Profile Settings</a>
-            <a class="dropdown-item" asp-controller="Settings" asp-action="ChangePassword">Change Password</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" asp-controller="Account" asp-action="Logout"></a>
-        </div>
 
-    </div>
-    
+        <div class="btn-group">
+
+            <a class="btn btn-success btn-block mr-1" asp-controller="Post" asp-action="EditPost">Create New Post</a>
+
+
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="False">
+                Settings
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownAdminPanel">
+                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Admin Panel</a>
+                <a class="dropdown-item" asp-controller="Settings" asp-action="Profile">Profile Settings</a>
+                <a class="dropdown-item" asp-controller="Settings" asp-action="ChangePassword">Change Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a>
+            </div>
+
+        </div>
     }
     else
     {
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
-    </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
     }
 </ul>

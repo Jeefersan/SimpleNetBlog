@@ -1,13 +1,16 @@
-﻿@model PostsViewModel
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model PostsViewModel
 
 @{
-    ViewData["Title"] = "Simple Net Blog";
+    ViewData["Title"] = "Home";
 }
-
 
 <br>
 
-<div class="container m-auto">
+<div class="container mx-5">
     
     @foreach (var post in @Model.Posts)
     {

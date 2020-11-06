@@ -29,7 +29,7 @@ namespace SimpleNetBlog.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, loginViewModel.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Panel");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

@@ -4,34 +4,52 @@
 
 @model Post
 
-<div class="card card-post mb-5">
+<div class="card card-post mb-5 mx-5">
 
     <div class="card-body">
         <h3 class="card-title">
             <a asp-controller="Home" asp-action="Post" asp-route-id="@Model.PostId">@Model.Title</a>
         </h3>
-        <p class="card-subtitle text-muted">@Model.CreatedDate by @User.Identity.Name</p><br>
-        <p class="card-text">@Model.Content</p>
+        <p class="card-subtitle text-muted">Written on @Model.CreatedDate</p><br>
+        <div class="card-text">@Html.Raw(Model.Content)</div>
     </div>
-    <div class="card-body text-muted font-italic">
-        Last updated: @if (Model.LastUpdatedDate != null)
-                      {
-                         <span>@Model.LastUpdatedDate</span>
-                      }
-                      else
-                      {
-                          <span>Never</span>
-                      }
-    </div>
+
+    @if (Model.LastUpdatedDate != null)
+    {
+        <div class="card-body text-muted font-italic">
+            <span>Last updated: @Model.LastUpdatedDate</span>
+        </div>
+    }
+
+
     @if (SignInManager.IsSignedIn(User))
     {
-        <div class="card-footer">
-            <a class="btn btn-lg" asp-controller="Panel" asp-action="EditPost" asp-route-id="@Model.PostId">
+        <div>
+            <a class="btn btn-lg pl-4" asp-controller="Post" asp-action="EditPost" asp-route-id="@Model.PostId">
                 <span class="fa fa-edit"></span>
             </a>
-            <a class="btn btn-lg" asp-controller="Panel" asp-action="RemovePost" asp-route-id="@Model.PostId">
+            <a class="btn btn-lg pl-2" data-toggle="modal" data-target="#confirmDeleteModal">
                 <span class="fa fa-trash"></span>
             </a>
+            <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmDeleteModal">Confirm delete</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this post?
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-secondary" data-dismiss="modal">Close</a>
+                            <a class="btn btn-danger" asp-controller="Post" asp-action="RemovePost" asp-route-id="@Model.PostId">Confirm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     }
 

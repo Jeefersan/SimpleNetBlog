@@ -1,0 +1,34 @@
+@model Post
+
+@section PageCss
+{
+    <link rel="stylesheet" href="~/lib/Trumbowyg-master/dist/ui/trumbowyg.min.css">
+}
+
+
+<form asp-controller="Post" asp-action="EditPost" method="post" enctype="multipart/form-data">
+
+    <input asp-for="PostId" value="@Model.PostId" type="hidden">
+    <div class="form-group">
+        <label asp-for="Title">Title</label><br>
+        <input asp-for="Title" class="fom-control">
+    </div>
+
+    <div>
+        <textarea asp-for="Content" id="editor"></textarea>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-secondary mr-1" asp-controller="Home" asp-action="Index">Cancel</button>
+        <input type="submit" class="btn btn-danger" value="Save Changes"/>
+    </div>
+</form>
+
+
+@section Scripts
+{
+    <script src="~/lib/Trumbowyg-master/dist/trumbowyg.min.js"></script>
+    <script>
+           $('#editor').trumbowyg();
+        </script>
+}
