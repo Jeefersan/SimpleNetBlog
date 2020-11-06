@@ -25,12 +25,12 @@ namespace SimpleNetBlog.Controllers
         public async Task<IActionResult> Profile()
         {
             var user = await _userManager.GetUserAsync(User);
-            var settingsViewModel = new ProfileViewModel
+            var viewModel = new ProfileViewModel
             {
                 DisplayName = user.DisplayName,
                 EmailAddress = user.Email
             };
-            return View();
+            return View(viewModel);
         }
         
         [HttpPost]

@@ -1,9 +1,9 @@
 @model ProfileViewModel
 
 
-<div class="container container-settings">
+<div class="container container-form">
 
-    <form asp-controller="Settings" asp-action="Profile" method="post" enctype="multipart/form-data">
+    <form class="form-container px-5 py-4 bg-white" asp-controller="Settings" asp-action="Profile" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
             <label asp-for="DisplayName">Display name</label>
@@ -14,19 +14,23 @@
             <input asp-for="EmailAddress" type="email" class="fom-control">
         </div>
 
-        <div class="validation-errors mt-5" asp-validation-summary="All"></div>
+        <div class="validation-errors mt-2" asp-validation-summary="All"></div>
 
         <div class="btn-block">
             <input class="btn btn-outline-secondary" type="submit" value="Save changes">
         </div>
+        
+            @if (TempData["Success"] != null)
+            {
+                <div class="mt-2">
+            <p class="alert alert-success">@TempData["Success"]</p>
+            </div>
+            }
     </form>
     
     
 
 
-    @if (TempData["Success"] != null)
-    {
-        <p class="alert alert-success">@TempData["Success"]</p>
-    }
+
 
 </div>

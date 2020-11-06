@@ -48,21 +48,9 @@ namespace SimpleNetBlog.Controllers
             {
                 post = await _postRepository.Update(updatedPost);
             }
-            return RedirectToAction("Post", new {id = post.PostId});
+            return RedirectToAction("Post", "Home", new {id = post.PostId});
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Post(int id)
-        {
-            var post = await _postRepository.Get(id);
-            if (post != null)
-            {
-                ViewData["Title"] = post.Title;
-                return View(post);
-            }
-
-            return NotFound();
-        }
 
         public async Task<IActionResult> RemovePost(int id)
         {

@@ -1072,15 +1072,8 @@
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.TagHelpers.input.cache
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.TagHelpers.output.cache
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.RazorCoreGenerate.cache
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Logout.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Account/Logout.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Home/Contact.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Home/Post.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Settings/ChangePassword.cshtml.g.cs
@@ -1103,5 +1096,4 @@
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.genruntimeconfig.cache
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Post/CreatePost.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Post/EditPost.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Post/Post.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/package-lock.json

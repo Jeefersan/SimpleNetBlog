@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -28,16 +26,11 @@ namespace SimpleNetBlog.Controllers
 
             {
                 Posts = posts
-                    .OrderBy(post => post.CreatedDate)
+                    .OrderByDescending(post => post.CreatedDate)
             };
             return View(postsViewModel);
         }
-
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
+        
         public async Task<IActionResult> Post(int id)
         {
             var post = await _postRepository.Get(id);

@@ -10,6 +10,7 @@ namespace SimpleNetBlog.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PostId { get; set; }
         public string Title { get; set; }
+        [DataType(DataType.Html)]
         public string Content { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? LastUpdatedDate { get; set; } = null;
