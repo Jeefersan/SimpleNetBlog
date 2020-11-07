@@ -41,6 +41,6 @@ Change password and enjoy!
 ## Web api
 - ```/api/post/{id?}```
 
-[Example](#http://simplenetblog.azurewebsites.net/api/post/3)
+[Example](http://simplenetblog.azurewebsites.net/api/post/1)
 
 - ```{"postId":3,"title":"Just some test post","content":"<p>Test Test Test</p>","createdDate":"2020-11-06T23:59:17.7514192","lastUpdatedDate":null}```
