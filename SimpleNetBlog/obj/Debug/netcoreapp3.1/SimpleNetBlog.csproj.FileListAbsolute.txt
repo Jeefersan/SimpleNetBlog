@@ -1096,4 +1096,3 @@
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/SimpleNetBlog.genruntimeconfig.cache
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Post/CreatePost.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Post/EditPost.cshtml.g.cs
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/package-lock.json

@@ -30,7 +30,7 @@ namespace SimpleNetBlog
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    Configuration.GetConnectionString("AzureConnection")));
 
             services.AddScoped<IPostRepository, PostRepository>();
 

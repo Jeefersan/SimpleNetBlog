@@ -2,7 +2,7 @@
 
 @section PageCss
 {
-    <link rel="stylesheet" href="~/lib/Trumbowyg-master/dist/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="~/lib/Trumbowyg-master/ui/sass/trumbowyg.css">
 }
 
 
@@ -10,8 +10,8 @@
 
     <input asp-for="PostId" value="@Model.PostId" type="hidden">
     <div class="form-group">
-        <label asp-for="Title">Title</label><br>
-        <input asp-for="Title" class="fom-control">
+        <label class="mb-0" asp-for="Title">Post title</label><br>
+        <input type="text" placeholder="Enter a title" asp-for="Title" class="fom-control">
     </div>
 
     <div>
