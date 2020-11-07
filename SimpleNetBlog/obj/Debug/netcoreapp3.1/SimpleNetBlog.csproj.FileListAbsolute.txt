@@ -647,7 +647,6 @@
 /home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Settings/ChangePassword.cshtml.g.cs
 /home/jeffrey/RiderProjects/SimpleNetBlog/SimpleNetBlog/obj/Debug/netcoreapp3.1/Razor/Views/Settings/Profile.cshtml.g.cs
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/appsettings.json
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/SimpleNetBlog.StaticWebAssets.xml
 /home/jantje/RiderProjects/SimpleNetBlog/SimpleNetBlog/bin/Debug/netcoreapp3.1/SimpleNetBlog
