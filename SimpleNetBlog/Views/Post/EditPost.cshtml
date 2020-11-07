@@ -6,12 +6,12 @@
 }
 
 
-<form asp-controller="Post" asp-action="EditPost" method="post" enctype="multipart/form-data">
+<form class="edit-post-container px-5 py-5 bg-white" asp-controller="Post" asp-action="EditPost" method="post" enctype="multipart/form-data">
 
     <input asp-for="PostId" value="@Model.PostId" type="hidden">
     <div class="form-group">
-        <label class="mb-0" asp-for="Title">Post title</label><br>
-        <input type="text" placeholder="Enter a title" asp-for="Title" class="fom-control">
+        <label class="mb-0 text-dark text-lg-left" asp-for="Title">Post title</label><br>
+        <input type="text" placeholder="Enter a title" asp-for="Title" class="fom-control col-sm-8">
     </div>
 
     <div>
@@ -19,8 +19,8 @@
     </div>
 
     <div class="btn-group">
-        <button class="btn btn-secondary mr-1" asp-controller="Home" asp-action="Index">Cancel</button>
-        <input type="submit" class="btn btn-danger" value="Save Changes"/>
+        <button class="btn btn-danger mr-1" asp-controller="Home" asp-action="Index">Cancel</button>
+        <input type="submit" class="btn btn-success" value="Save Changes"/>
     </div>
 </form>
 

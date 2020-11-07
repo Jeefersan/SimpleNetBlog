@@ -16,10 +16,25 @@ body {
   min-width: 480px;
 }
 
+
 .container-form {
   height: 80vh;
   display: flex;
   align-items: center;
+}
+
+.div-block {
+  display: block;
+  width: 85%;
+}
+
+.edit-post-container {
+  margin: auto;
+  min-width: 95%;
+  min-height: 95%;
+  border-radius: 16px;
+  -webkit-box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
+  box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
 }
 
 .footer {
@@ -33,6 +48,9 @@ body {
   -webkit-box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
   box-shadow: 5px 5px 9px 4px rgba(176, 176, 176, 0.79);
 }
+
+
+
 
 textarea {
   background-color: white;

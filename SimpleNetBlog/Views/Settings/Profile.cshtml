@@ -1,6 +1,5 @@
 @model ProfileViewModel
 
-
 <div class="container container-form">
 
     <form class="form-container px-5 py-4 bg-white" asp-controller="Settings" asp-action="Profile" method="post" enctype="multipart/form-data">
@@ -20,12 +19,12 @@
             <input class="btn btn-outline-secondary" type="submit" value="Save changes">
         </div>
         
-            @if (TempData["Success"] != null)
-            {
-                <div class="mt-2">
-            <p class="alert alert-success">@TempData["Success"]</p>
+        @if (TempData["Success"] != null)
+        {
+            <div class="mt-2">
+                <p class="alert alert-success">@TempData["Success"]</p>
             </div>
-            }
+        }
     </form>
     
     
