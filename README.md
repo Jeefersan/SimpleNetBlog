@@ -4,9 +4,13 @@ It's intended to be used by a single admin user.
 
 Feel free to clone this repo and adjust it to your needs.
 
+# Screenshots
 
+![Homepage](https://github.com/Jeefersan/SimpleNetBlog/blob/main/images/Home.png)
 
-## How to setup
+![Editpost](https://github.com/Jeefersan/SimpleNetBlog/blob/main/images/EditPost.png)
+
+# How to setup
 First install .NET Core SDK 3.1. Download from [here](https://dotnet.microsoft.com/download)
 
 Then install MS SQL Server from [here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
@@ -38,7 +42,7 @@ and password *password123*
 
 Change password and enjoy!
 
-## Web api
+# Web api
 - ```/api/post/{id?}```
 
 [Example](http://simplenetblog.azurewebsites.net/api/post/1)
