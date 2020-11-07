@@ -25,6 +25,7 @@
       "SimpleNetBlog/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Authentication.Certificate": "3.1.9",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.UI": "3.1.9",
@@ -323,6 +324,17 @@
         "compile": {
           "lib/netstandard2.1/EntityFramework.SqlServer.dll": {},
           "lib/netstandard2.1/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/3.1.9": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "3.1.9.0",
+            "fileVersion": "3.100.920.47309"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
@@ -4113,6 +4125,13 @@
       "sha512": "sha512-yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
       "path": "entityframework/6.4.4",
       "hashPath": "entityframework.6.4.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/3.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2MZXBxGW5Z23HWqtV5Gd3UvGRfpScAiXIZHUwGil4l+3lkPFGJM2WQCBqsgW4hyE8uXjWKUuVnxMR+0YJg5TKw==",
+      "path": "microsoft.aspnetcore.authentication.certificate/3.1.9",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.3.1.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
       "type": "package",
