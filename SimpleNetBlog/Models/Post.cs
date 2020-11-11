@@ -12,8 +12,9 @@ namespace SimpleNetBlog.Models
         public string Title { get; set; }
         [DataType(DataType.Html)]
         public string Content { get; set; }
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
-        public DateTime? LastUpdatedDate { get; set; } = null;
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime? LastUpdatedDate { get; set; }
+        
 
     }
 

@@ -28,7 +28,7 @@ namespace SimpleNetBlog.Models
             var post = await Get(updatedPost.PostId);
             post.Title = updatedPost.Title;
             post.Content = updatedPost.Content;
-            post.LastUpdatedDate = DateTime.Now;
+            post.LastUpdatedDate = DateTime.UtcNow;
 
             await _db.SaveChangesAsync();
             return updatedPost;

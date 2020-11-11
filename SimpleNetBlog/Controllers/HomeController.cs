@@ -22,6 +22,7 @@ namespace SimpleNetBlog.Controllers
         public async Task<IActionResult> Index()
         {
             var posts = await _postRepository.GetAll();
+
             var postsViewModel = new PostsViewModel
 
             {
@@ -36,6 +37,7 @@ namespace SimpleNetBlog.Controllers
             var post = await _postRepository.Get(id);
             if (post != null)
             {
+                post.CreatedDate = post.CreatedDate;
                 return View(post);
             }
 

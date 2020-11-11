@@ -11,14 +11,14 @@
             <h3 class="card-title">
                 <a asp-controller="Home" asp-action="Post" asp-route-id="@Model.PostId">@Model.Title</a>
             </h3>
-            <p class="card-subtitle text-muted">Written on @Model.CreatedDate</p><br>
+            <p class="card-subtitle text-muted">Written on @Model.CreatedDate.ToLocalTime()</p><br>
             <div class="card-text">@Html.Raw(Model.Content)</div>
         </div>
 
         @if (Model.LastUpdatedDate != null)
         {
             <div class="card-body text-muted font-italic">
-                <span>Last updated: @Model.LastUpdatedDate</span>
+                <span>Last updated: @Model.LastUpdatedDate.Value.ToLocalTime()</span>
             </div>
         }
 
